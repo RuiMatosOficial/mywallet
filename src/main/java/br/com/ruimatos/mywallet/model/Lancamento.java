@@ -1,4 +1,4 @@
-package br.com.ruimatos.mywallet;
+package br.com.ruimatos.mywallet.model;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
@@ -16,6 +16,9 @@ import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 import org.springframework.data.jpa.convert.threeten.Jsr310JpaConverters;
+
+import br.com.ruimatos.mywallet.enums.TipoLancamento;
+import br.com.ruimatos.mywallet.enums.TipoStatus;
 
 @Entity
 @Table(name = "lancamentos", schema = "carteira")

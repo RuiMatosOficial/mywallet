@@ -1,4 +1,4 @@
-package br.com.ruimatos.mywallet;
+package br.com.ruimatos.mywallet.enums;
 
 public enum TipoLancamento {
 	
