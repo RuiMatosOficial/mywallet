@@ -8,6 +8,8 @@ public class MywalletApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(MywalletApplication.class, args);
-	}
+	    
+		Usuario usuario = new Usuario();
+		usuario.setNome("Rui");}
 
 }
