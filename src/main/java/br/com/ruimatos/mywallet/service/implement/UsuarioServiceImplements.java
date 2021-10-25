@@ -3,6 +3,7 @@ package br.com.ruimatos.mywallet.service.implement;
 import br.com.ruimatos.mywallet.model.Usuario;
 import br.com.ruimatos.mywallet.repository.UsuarioRepository;
 import br.com.ruimatos.mywallet.service.UsuarioService;
+import br.com.ruimatos.mywallet.service.exception.UsuarioException;
 
 public class UsuarioServiceImplements implements UsuarioService{
 
@@ -26,8 +27,10 @@ public class UsuarioServiceImplements implements UsuarioService{
 
 	@Override
 	public void validarEmail(String email) {
-		// TODO Auto-generated method stub
 		
+		if(usuarioRepository.existsByEmail(email)) {
+			throw new UsuarioException("Já existe um email cadastrado");
+		}
 	}
 
 }
